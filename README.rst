@@ -50,7 +50,28 @@ Windows
 Mac and Linux
 ^^^^^^^^^^^^^
 
+<<<<<<< HEAD
 see `INSTALL.rst <INSTALL.rst>`__
+=======
+Install from PYPI or see `INSTALL.md <https://github.com/Pewpews/happypanda/blob/master/INSTALL.md>`__
+
+PYPI
+^^^^^^^^^^^^^
+``pip install happypanda`` (thanks `@Evolution0 <https://github.com/Evolution0>`__)
+and then run with ``happypanda --home``
+
+Note: use of the ``--home`` flag will make happypanda create required files and directories at:
+
+On windows:
+``'C:\Users\YourName\AppData\Local\Pewpew\Happypanda'``
+
+On mac:
+``'/Users/YourName/Library/Application Support/Happypanda'``
+
+On linux:
+``'/home/YourName/.local/share/Happypanda'``
+
+>>>>>>> 0f2edb3bdb4f811494310b4402a7f21730f6f661
 
 Updating
 ========
@@ -58,6 +79,15 @@ Updating
 | Overwrite your previous installation.
 | More info in the `wiki <https://github.com/Pewpews/happypanda/wiki>`__
 
+<<<<<<< HEAD
+=======
+
+PYPI
+^^^^^^^^^^^^^
+``pip install --upgrade happypanda``
+
+
+>>>>>>> 0f2edb3bdb4f811494310b4402a7f21730f6f661
 Misc.
 =====
 
@@ -88,4 +118,8 @@ Dependencies
 Contributing
 ============
 
+<<<<<<< HEAD
 Please refer to ``HappypandaX`` instead.
+=======
+Please refer to ``HappypandaX`` instead.
+>>>>>>> 0f2edb3bdb4f811494310b4402a7f21730f6f661
