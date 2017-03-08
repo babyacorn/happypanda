@@ -413,11 +413,11 @@ class ArchiveFile():
     def namelist(self):
         filelist= []
         for x in self.archive.namelist():
-            if x.endswith('/'):
-                filelist.append(x)
-            else:
+            try:
                 filelist.append(x[:(x.rindex('/')+1)])
-                filelist.append(x)
+            except ValueError:
+                pass
+            filelist.append(x)
         seen = set()
         filelist = [x for x in filelist if x not in seen and not seen.add(x)]
         return filelist
@@ -554,12 +554,11 @@ def check_archive(archive_path):
             for n in con:
                 if not n.lower().endswith(IMG_FILES):
                     gallery_probability -= 1
-            if gallery_probability >= (len(con) * 0.8):
+            if gallery_probability >= (len(con) * 0.4):
                 return d
     if zip_dirs: # There are directories in the top folder
         # check parent
-        r = gallery_eval('')
-        if r:
+        if isinstance(gallery_eval(''), str):
             galleries.append('')
         for d in zip_dirs:
             r = gallery_eval(d)
